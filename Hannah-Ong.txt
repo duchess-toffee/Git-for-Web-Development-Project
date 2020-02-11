@@ -1,0 +1,119 @@
+https://codepen.io/duchess_toffee/pen/WNvvVZd?editors=1100
+https://codepen.io/duchess_toffee/pen/jOPPYEa
+
+
+    1. What is Semantic HTML? 
+        Semantic HTMl is used to help add meaning to the tags/HTML code. This is particularly useful for screenreaders and accessibility.
+    2. What is HTML used for? 
+        HTML is a markup languaged that is used to provide structure to web content.
+    3. What is an attribute and where do we put it? 
+        Attributes are applied inside the HTML start tag. They are used to provide functionality to the element. 
+    4. What is the h1 tag used for? How many times should I use it on a page?
+        H1 is the first header tag. It is typically the most important element and formatted in a way to stand out the most. 
+    5. Name two tags that have required attributes
+        The "img" element has a required "src" attribute that will point to the location of the image file/url. Similarly, the "a" tag has a required "href" attribute that points to the url.
+    6. What do we put in the head of our HTML document? 
+        This is where we put metadata for the HTML document. These will not be displayed, but are required to display the web page correctly. Examples of these are linking in stylesheets, scripts, etc.
+    7. What is an id? 
+        The id in HTML is a global attribute that is unique to the whole document. It is case sensitive and does not contain whitespaces. It is used to link the element to CSS styles or scripting.
+    8. What elements can I add an id to? 
+        You can add an id to any HTML element as an attribute within the tag as long as it is unique. 
+    9. How many times can I use the same id on a page? 
+        Only once. It must be unique.
+    10. What is a class? 
+        A class in HTML is a global attribute that can be applied to elements. It is case sensitive and is space-separated. Similar to the id, it is used to link the element(s) to CSS styles or scripting.
+    11. What elements can I add a class to? 
+        You can add a class to any HTML elements. You can also add multiple classes as long as they are space-separated.
+    12. How many times can I use the same class on a page? 
+        As many times as you like. They are used to help group elements together.
+    13. How do I get my link to open in a new tab?
+        <a href="" target="_blank"></a> By using the target="_blank".
+    14. What is the alt attribute used for? 
+        In the event that the image does not render or display properly, the alt text is provided as alternative information for the image. Additionally screenreaders will read the text for those who are vision-impaired.
+    15. How do I reference an id?
+        Within CSS, you can refer to the HTML id by using a # before the name. Ex. #id 
+    16. What is the difference between a section and a div
+        Section provides semantic/themed meaning to the items grouped inside. On the otherhand, the div does not provide any meaning and is used for styling purposes.
+    17. What is CSS used for? 
+        CSS is used to help provide styling to the web page such as fonts, layout, colors, animations, etc.
+    18. How to we select an element? Example - every h2 on the page
+        You can just use the HTML element as the CSS selector. The solution to the example here would be h2{}. However, if there are styles with more specificity, it will be overwritten since CSS is a cascading style sheet.
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+        I would use class if I had a group of items that I wanted to apply the same style to. For example. If I wanted the first h2 element, and the 3rd link to be red, I would apply a class="red" in HTML and apply .red{color:red;} in CSS so that those elements are ensured to be red.
+    20. How do we select classes in CSS?
+        With a . before the class name. 
+    21. How do we select a p element with a single class of “human””?
+        .human or p.human
+    22. What is a parent child selector? When would this be useful? 
+        The parent child selector allows you to style direct children nested within HTML. For example, doing div a{} will select all links within the div. However, doing div > a{} will select only links that are direct children of the div. This would be useful if you're trying to style with more specificity.
+    23. How do you select all links within a div with the class of sidebar?
+        div.sidebar a{} will select the div with the class of sidebar, and the a will select all a decendants.
+    24. What is a pseudo selector?
+        A pseudo selector specifies a special state of the element. For example, a:hover{color: pink;} would style any links pink when hovered over.
+    25. What do we use the change the spacing between lines?
+        line-height: normal; - default
+        line-height: 2; - multiplies 2 by the font size
+        line-height: 2em; - the length of the box height is used to produce the height
+        line-height: 200%; - 200% of the font size
+        line-height: 20px; - a fixed 20 pixels
+    26. What do we use to change the spacing between letters?
+        letter-spacing: normal; - the default
+        letter-spacing: 2px; - using pixels to increase the spaces between letters
+        letter-spacing: 0.2em; - using relative (em) spacing to font-size
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+        text-transform: uppercase; - capitalizes everything
+        text-transform: lowercase; - lowercases everything
+        text-transform: capitalize; - propercases everything
+    28. How do I add a 1px border around my div that is dotted and black?
+        div{border: 1px dotted black;}
+    29. How do I select everything on the page? 
+        In CSS, the *{} will apply the style to everything on the page. If you have a more specific or style that is provided later, that will be applied.
+    30. How do I write a comment in CSS?
+        /*This is a comment in CSS*/
+    31. How do I find out what file I am in, when I am using the command line? 
+        pwd. shows the current path.
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+        ls. Displays files and folders unless hidden (if the name starts with a . it's  hidden ex. git). Alternatively, ls-a will show ALL files and folders.
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+        rm filename. This will remove the file without any safeguards. This cannot be undone!
+    34. Why should I use version control?
+        This helps to track your changes and updates, but it also helps to track everyone elses' changes as well on the project/code. This will assist with debugging and merging of changes so that there are less conflicts.
+    35. How often should I commit to github?
+        Relatively often. Per our instructor approximately every 20 minutes or so. I would say any time you make a notable change, it should be committed. 
+    36. What is the command we would use to push our repo up to github? 
+        .git push -u origin branch-name
+    37. Walk me through Lambda's git flow. 
+        Fork your own version of the repository (repo)
+        Settings > Manage access > add collaborators > add TL
+        Grab the repo's clone url
+        In CLI go to the directory using cd [directory]
+        Use git clone [repo url] to clone repo
+        Go to the cloned repo cd [repo name] (if you can't remember the name, ls to list the items)
+        Create your branch in the repo git checkout -b Hannah-Ong (if you already have a branch, then just git checkout Hannah-Ong)
+        Work on the repo. Add file touch [filename]. Open in VS code[filename] or code .
+        Add your untracked changes to the working tree via git add .
+        Commit your changes with a message with git commit -m "[message of updates]"
+        Push changes to Github git push -u origin [branch name]
+        Submit a pull request inside Github. Click on Branch: master, update to the branch name, click new pull request
+        On the Pull Request page, update Base Repositoy to your forked repo and add your TL as reviewer
+
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+        display: block; will start the element on a new line and will take the full width available
+        display: in-line; will show the element inline with other elements. There can be items to the left/right of it.
+    2. What happens when an element is positioned absolutely? 
+        The element will be removed from the layout of the document. Other elements will act as if the absolute element is not there.
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+        Honestly, a bit confused as to what this question is asking, you can use flex-box and assign it a width so that you can get the desired size and width. You can set padding/margin to 0 and still use the width css.
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+        paragraph, h1, div are 3 elements that display block by default. Span and "a" are inline elements. A button is by default an inline-block element.
+    5. In your own words, explain the box model. What is the fix for the box model? 
+        The box model is a way to explain each HTML element's parts. The content starts in the middle, and is wrapped with the padding. The padding is wrapped with the border (if there is a border and it goes outside of the padding). The margin is wrapped outside all of that. Be default the margin and padding are transparent. The box model is rigid, and so the "fix" for the box model is the flex-box.
+
+ Research and understand what a merge conflict is and how to resolve it.
+ Research the Git commands pull, rebase, merge. These commands will allow you to bring in changes that other developers push to the master branch.
+ Research the Git commands reset , revert, clean. These commands will allow you to go back and amends previous commits you have made.
+ Research and set up a Graphical User Interface (GUI) Git console.
+ Research and setup SSH keys with GitHub, so that you do not need to input your username/password each time you push. done :)
